@@ -16,8 +16,8 @@ function ensureDir(filePath: string) {
 export function appendMemory(entry: MemoryEntry) {
   const line = JSON.stringify(entry);
   ensureDir(paths.memoryFile);
-  fs.appendFileSync(paths.memoryFile, line + "
-", "utf8");
+  fs.appendFileSync(paths.memoryFile, line + "\n", "utf8");
+const lines = raw.split("\n");
 }
 
 export function queryMemory(limit = 50): MemoryEntry[] {
