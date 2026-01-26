@@ -14,7 +14,8 @@ fs.appendFileSync(paths.memoryFile, line + "\n", "utf8");
 }export function queryMemory(limit = 50): MemoryEntry[] {
 if (!fs.existsSync(paths.memoryFile)) return [];
 const raw = fs.readFileSync(paths.memoryFile, "utf8").trim();
-if (!raw) return [];const lines = raw.split("\n");
+if (!raw) return [];
+const lines = raw.split("\n");
 const slice = lines.slice(-limit);return slice
 .map((l) => {
 try {
