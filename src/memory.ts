@@ -25,8 +25,7 @@ export function queryMemory(limit = 50): MemoryEntry[] {
   const raw = fs.readFileSync(paths.memoryFile, "utf8").trim();
   if (!raw) return [];
 
-  const lines = raw.split("
-");
+  const lines = raw.split("\n");
   const slice = lines.slice(-limit);
 
   return slice
