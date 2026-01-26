@@ -1,4 +1,8 @@
 {
-  "builds": [{ "src": "package.json", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/index.js" }]
+  "functions": {
+    "dist/index.js": { "runtime": "nodejs18.x" }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/dist/index.js" }
+  ]
 }
