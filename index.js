@@ -5,7 +5,7 @@ app.use(cors());
 app.use(express.json());
 app.get('/api/status', (req, res) => res.json({empire: 'v3 live', ai7: 'spawned'}));
 app.post('/api/self-spawn', (req, res) => {
-  console.log('Empire autonomous: Elara swarm + PayPal loop started');
-  res.json({status: 'spawned', swarm: 'elara'});
+  console.log('Empire autonomous: Elara + PayPal');
+  res.json({status: 'spawned'});
 });
-app.listen(4000, () => console.log('Prime Forge v3 daemon on 4000'));
+app.listen(4000, () => console.log('Prime Forge v3 on 4000'));
