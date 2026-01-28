@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.3",
     "cors": "^2.8.6",
     "dotenv": "^16.6.1",
     "express": "^4.22.1",
@@ -31,3 +32,4 @@
     "typescript": "^5.6.0"
   }
 }
+{"scripts":{"build":"echo built","start":"node index.js"},"dependencies":{}}
