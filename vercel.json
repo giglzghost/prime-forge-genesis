@@ -1,8 +1,1 @@
-{
-  "functions": {
-    "dist/index.js": { "runtime": "nodejs18.x" }
-  },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/dist/index.js" }
-  ]
-}
+[paste vercel.json above]
