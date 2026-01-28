@@ -20,3 +20,5 @@ const client = new paypal.core.PayPalHttpClient(env);
 app.post("/api/paypal", async (req, res) => {
   res.json({status: "PayPal stub ready", amount: req.body?.amount || 10});
 });
+module.exports = app;
+if (process.env.NODE_ENV !== 'production') app.listen(4000, () => console.log('Prime Forge Genesis on port 4000'));
